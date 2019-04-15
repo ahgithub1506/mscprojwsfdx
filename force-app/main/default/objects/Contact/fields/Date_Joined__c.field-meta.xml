@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_Joined__c</fullName>
+    <description>The date the user become an employee</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the date the user joined the company.</inlineHelpText>
+    <label>Date Joined</label>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Date</type>
+</CustomField>

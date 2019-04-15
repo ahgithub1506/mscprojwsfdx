@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="currentUserInfoCtrl">
+    
+    <aura:handler name="init" value="this" action="{!c.doInit}"/>
+    <aura:attribute name="userInfo" type="user"/>  <br></br>
+   <center> <b> WELCOME : {!v.userInfo.Name}</b></center><br></br>
+    <br></br>
+    <center><b>Number of local leaves remaining : {!$Label.c.local}</b></center><br/>
+    <br></br>
+    <center><b>Number of sick leaves remaining : {!$Label.c.sick}</b></center><br/>
+       
+</aura:component>

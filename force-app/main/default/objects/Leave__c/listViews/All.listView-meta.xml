@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Type_of_Leave__c</columns>
+    <columns>Date_From__c</columns>
+    <columns>Date_To__c</columns>
+    <columns>Approval_Status__c</columns>
+    <columns>Leave_For__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>All</label>
+    <sharedTo>
+        <portalRole>AccentureLeaveManagementCommunityPartnerManager</portalRole>
+    </sharedTo>
+</ListView>

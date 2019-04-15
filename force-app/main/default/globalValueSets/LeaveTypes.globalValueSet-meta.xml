@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Annual</fullName>
+        <default>true</default>
+        <label>Annual</label>
+    </customValue>
+    <customValue>
+        <fullName>Sick</fullName>
+        <default>false</default>
+        <label>Sick</label>
+    </customValue>
+    <description>The types of leaves available.</description>
+    <masterLabel>LeaveTypes</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Leave_Request_Approved</fullName>
+        <description>Leave Request Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>AccentureLeaveManagementCommunityPartnerManager</recipient>
+            <type>portalRoleSubordinates</type>
+        </recipients>
+        <recipients>
+            <recipient>AccentureLeaveManagementCommunityPartnerUser</recipient>
+            <type>portalRoleSubordinates</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Leave_Email_Responses/Leave_Request_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Leave_Request_Rejected</fullName>
+        <description>Leave Request Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>AccentureLeaveManagementCommunityPartnerManager</recipient>
+            <type>portalRoleSubordinates</type>
+        </recipients>
+        <recipients>
+            <recipient>AccentureLeaveManagementCommunityPartnerUser</recipient>
+            <type>portalRoleSubordinates</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Leave_Email_Responses/Leave_Request_Rejected</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Approval_Status_Pending</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending</literalValue>
+        <name>Approval Status Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Status_to_Approved</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Approval Status to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Status_to_Rejected</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Approval Status to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+</Workflow>

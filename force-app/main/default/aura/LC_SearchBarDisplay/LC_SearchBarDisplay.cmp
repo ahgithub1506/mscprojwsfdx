@@ -1,0 +1,88 @@
+<aura:component implements="force:appHostable,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes"
+                controller="AP_LeaveDetails"
+                access="global">
+    
+    <!--Attributes Start-->
+    <aura:attribute name="allLeaves" type="Object[]" />
+    <aura:attribute name="filteredLeave" type="Object[]" />
+    <aura:attribute name="searchText" type="String" />
+    <aura:attribute name="selectedItem" type="Object" />
+    <!--Attributes End-->
+    
+    <ltng:require scripts="{!$Resource.lodash}" 
+                  styles="styles" 
+                  afterScriptsLoaded="{!c.doInit}"/>
+    
+    <lightning:card >
+        <aura:set attribute="title">
+            
+            <aura:if isTrue="{!!v.selectedItem.Id}">
+                View Leave
+            </aura:if>
+        </aura:set>
+        <p class="slds-p-horizontal--small">
+
+            <aura:if isTrue="{!!v.selectedItem.Id}">
+                <lightning:input label=" " placeholder="Search Leaves" 
+                                 value="{!v.searchText}" 
+                                 onchange="{!c.callFilter}" 
+                                 class="slds-m-bottom--xx-small no-label"/>
+                
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                    <thead>
+                        <tr class="slds-text-title_caps">
+                            <th scope="col">
+                                <div class="slds-truncate" title="LeaveId">Leave Id</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Leave For">Employee Name</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Type Of Leave">Type Of Leave</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Approval Status">Approval Status</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Date From">Date From</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Date To">Date To</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.filteredLeave}" var="item" end="50">
+                            <tr id="{!item.Id}" onclick="{}">
+                                <th scope="row" data-label="Item" id="{!item.Id}">
+                                    <div class="slds-truncate" title="{!item.Name}" 
+                                         id="{!item.Id}">{!item.Name}</div>
+                                </th>
+                                <th scope="row" data-label="Item" id="{!item.Id}">
+                                    <div class="slds-truncate" title="{!item.Leave_For__r.Name}" 
+                                         id="{!item.Id}">{!item.Leave_For__r.Name}</div>
+                                </th>
+                                <th scope="row" data-label="Item" id="{!item.Id}">
+                                    <div class="slds-truncate" title="{!item.Type_of_Leave__c}" 
+                                         id="{!item.Id}">{!item.Type_of_Leave__c}</div>
+                                </th>
+                                <th scope="row" data-label="Item" id="{!item.Id}">
+                                    <div class="slds-truncate" title="{!item.Approval_Status__c}" 
+                                         id="{!item.Id}">{!item.Approval_Status__c}</div>
+                                </th>  
+                                <th scope="row" data-label="Item" id="{!item.Id}">
+                                    <div class="slds-truncate" title="{!item.Date_From__c}" 
+                                         id="{!item.Id}">{!item.Date_From__c}</div>
+                                </th>   
+                                <th scope="row" data-label="Item" id="{!item.Id}">
+                                    <div class="slds-truncate" title="{!item.Date_To__c}" 
+                                         id="{!item.Id}">{!item.Date_To__c}</div>
+                                </th>                                                               
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </aura:if>
+        </p>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,18 @@
+Dear {!Contact.LastName} {!Contact.FirstName}
+
+Unfortunately, your recent leave request has been REJECTED.
+
+Leave Details:
+
+Leave Application for: {!Leave__c.Leave_For__c} 
+Type of Leave: {!Leave__c.Type_of_Leave__c} 
+Date From: {!Leave__c.Date_From__c} 
+Date To: {!Leave__c.Date_To__c} 
+No Of Hours: {!Leave__c.ofHours__c} 
+Reason: {!Leave__c.Reason__c}
+
+Manager Comments:
+{!ApprovalRequest.Comments}
+
+Best Regards,
+{!ApprovalRequest.Process_Approver}

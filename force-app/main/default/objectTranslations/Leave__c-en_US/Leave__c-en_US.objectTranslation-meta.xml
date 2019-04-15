@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Leave</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Leaves</value>
+    </caseValues>
+    <layouts>
+        <layout>Leave Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Date cannot be in the past. --></errorMessage>
+        <name>VR_DateFrom</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Date To must be greater than Date From --></errorMessage>
+        <name>VR_DateTo</name>
+    </validationRules>
+</CustomObjectTranslation>
